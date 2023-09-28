@@ -1,3 +1,3 @@
-package org.cscie88c.week2
+package org.cscie88c.week2 class Faculty {
 
-// write code for class Faculty below
+}

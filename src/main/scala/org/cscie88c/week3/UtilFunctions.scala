@@ -1,6 +1,6 @@
 package org.cscie88c.week3
 
-object UtilFunctions {
+class UtilFunctions {
   
   def mult2(x: Int, y: Int): Int = x * y
   
