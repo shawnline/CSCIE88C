@@ -15,7 +15,8 @@ class PrerequisiteTest extends StandardTest {
    ).map(CustomerTransaction(_))
 
   "executed" should {
-    "filter transactions greater than $100" in {
+    //TODO: Fix this
+    "filter transactions less than $100" in {
       val expectedResult = List("CS4147,08-Jul-13,121","CS3904,20-Jul-14,103").map(CustomerTransaction(_))
       Prerequisite.getFilteredTransactions(testData) shouldBe(expectedResult)
     }
