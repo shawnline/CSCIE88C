@@ -18,6 +18,7 @@ lazy val root = (project in file(".")).settings(
   libraryDependencies ++= Dependencies.core ++ Dependencies.scalaTest,
   libraryDependencies += "org.scalatestplus" %% "scalacheck-1-17" % "3.2.17.0" % "test",
   assembly / mainClass := Some("org.cscie88c.MainApp"),
+  libraryDependencies += "com.twitter" %% "algebird-core" % "0.13.7",
   assembly / assemblyJarName := "2023FallScalaBigData.jar",
   assembly / test := {},
   assembly / assemblyMergeStrategy := {

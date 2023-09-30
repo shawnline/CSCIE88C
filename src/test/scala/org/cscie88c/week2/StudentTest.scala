@@ -50,4 +50,4 @@ class StudentTest extends StandardTest {
       Student.studentTotalsByCountry("Japan") shouldBe 0
     }
   }
-  
+}

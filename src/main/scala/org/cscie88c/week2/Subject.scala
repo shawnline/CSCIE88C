@@ -15,13 +15,13 @@ object Subject {
       isStem = fields(2).toBoolean
     )
   }
-    val allSubjects: List[Subject] = List(
-      Subject(1, "Physics", isStem = true),
-      Subject(2, "Chemistry", isStem = true),
-      Subject(3, "Math", isStem = true),
-      Subject(4, "English", isStem = false)
-    )
-    def stemSubjects: List[Subject] = {
-      allSubjects.filter(_.isStem)
-    }
+  val allSubjects: List[Subject] = List(
+    Subject(1, "Physics", isStem = true),
+    Subject(2, "Chemistry", isStem = true),
+    Subject(3, "Math", isStem = true),
+    Subject(4, "English", isStem = false)
+  )
+  def stemSubjects: List[Subject] = {
+    allSubjects.filter(_.isStem)
+  }
 }

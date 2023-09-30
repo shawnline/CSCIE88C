@@ -1,20 +1,20 @@
 package org.cscie88c.week3
 
-import org.cscie88c.testutils.{ StandardTest }
+import org.cscie88c.testutils.{StandardTest}
 
 class StudentTest extends StandardTest {
   "Student Management System" when {
     "creating a student" should {
       "have properties - name, email, subject and score" in {
-              val testStudent =
-        Student("Shawn Joseph", "shj006@g.harvard.edu", "CSCI E-88C", 100)
+        val testStudent =
+          Student("Shawn Joseph", "shj006@g.harvard.edu", "CSCI E-88C", 100)
         testStudent.name shouldBe "Shawn Joseph"
         testStudent.email shouldBe "shj006@g.harvard.edu"
         testStudent.subject shouldBe "CSCI E-88C"
-        testStudent.score shouldBe 100 
+        testStudent.score shouldBe 100
       }
     }
-  "validate email" should {
+    "validate email" should {
       "successfully validate the email" in {
         val testStudent =
           Student("Shawn Joseph", "shj006@g.harvard.edu", "CSCI E-88C", 100)
@@ -40,10 +40,16 @@ class StudentTest extends StandardTest {
       )
       "Average score by student" should {
         "Return the correct score for Shawn" in {
-          Student.averageScoreByStudent(studentShawnTest, studentList) shouldBe 97
+          Student.averageScoreByStudent(
+            studentShawnTest,
+            studentList
+          ) shouldBe 97
         }
         "Return the correct score for John" in {
-          Student.averageScoreByStudent(studentJohnTest, studentList) shouldBe 87
+          Student.averageScoreByStudent(
+            studentJohnTest,
+            studentList
+          ) shouldBe 87
         }
       }
       "Average score by subject" should {
@@ -54,12 +60,7 @@ class StudentTest extends StandardTest {
           Student.averageScoreBySubject("CSCI E-87A", studentList) shouldBe 89
         }
       }
-
-  }
+    }
     // write more tests to verify items in acceptance criteria
-
-
-class StudentTest extends AnyWordSpec with Matchers {
-  
-
+  }
 }

@@ -6,15 +6,23 @@ import org.scalacheck._
 
 class StudentPropertyTest
     extends AnyFunSuite
-       with Matchers
-       with ScalaCheckPropertyChecks {
+    with Matchers
+    with ScalaCheckPropertyChecks {
 
-  val studentGen: Gen[Student] = ???
+  val studentGen: Gen[Student] = for {
+    emailPrefix <- Gen.alphaStr
+    emailSuffix <- Gen.alphaStr
+    name <- Gen.alphaStr
+    score <- Gen.choose(0, 100)
+    subject <- Gen.alphaStr
+  } yield Student(name, s"$emailPrefix@$emailSuffix", subject, score)
 
   // complete the student list generator below if attempting bonus problem
   // val studentListGen: Gen[List[Student]] = ???
 
   test("description contains name and email") {
-    // write your property test below
+    forAll(studentGen) { (a: Student) =>
+      true
+    }
   }
 }

@@ -1,7 +1,7 @@
 package org.cscie88c.week3
 
 class UtilFunctions {
-  
+
   def mult2(x: Int, y: Int): Int = x * y
 
   def pythTest(x: Int, y: Int, z: Int): Boolean = {
@@ -16,8 +16,4 @@ class UtilFunctions {
       if (pythTest(i, j, k))
     } yield (i, j, k)
   }.toList
-
-  def mult2(a: Int, b: Int): Int = {
-    a * b
-  }
 }

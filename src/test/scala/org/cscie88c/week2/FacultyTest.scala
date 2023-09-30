@@ -4,10 +4,6 @@ import org.cscie88c.testutils.{StandardTest}
 
 // write unit tests for Faculty below
 class FacultyTest extends StandardTest {
-  
-import org.cscie88c.testutils.StandardTest
-
-class FacultyTest extends StandardTest {
   "Faculty Test" when {
     "Mike Stone Test" when {
       val name = "James Henry"
