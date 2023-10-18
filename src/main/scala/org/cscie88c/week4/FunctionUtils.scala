@@ -12,7 +12,7 @@ object FunctionUtils {
   def myPositivePower(x: Int, n: Int): Int = applyNtimes(n - 1)(x)(_ * x)
 
   def deferredExecutor(name: String)(f: Int => Int): Int => Int = {
-    def ret(x: Int): Int = {
+    def ret(x: Int) = {
       print("running on deferred executor " + name + " with value " + x)
       f(x)
     }
