@@ -20,14 +20,16 @@ docker-compose up -d
 docker exec -it spark_spark-master_1  /bin/bash
 ```
 
-3. Start the interactive shell
+3. Start the interactive shell and run commands
 ```
 bin/spark-shell
+
+scala> spark.range(1000 * 1000 * 1000).count()
 ```
 
 4. View the container logs
 ```
-docker logs <container name>
+docker-compose logs <container name>
 ```
 For more logging options see: https://docs.docker.com/engine/reference/commandline/logs/
 
@@ -61,7 +63,7 @@ docker exec -it spark_spark-master_1  /bin/bash
 
 5. Submit the spark job
 ```
-./bin/spark-submit --class "org.cscie88c.week10.SparkAverageTransactionAggregateJob" --master local[4] /opt/spark-apps/SparkAdvancedApp.jar
+./bin/spark-submit --class "com.example.sparkadvanced.SparkAdvancedApp" --master local[4] /opt/spark-apps/AdvancedSparkApp.jar
 ```
 
 6. Review results
@@ -80,6 +82,7 @@ docker-compose down
 ```
 
 9. Scaling workers
+
 To scale the job horizontally by using more workers use the `--scale <service>=<n>` option to start the cluster with more workers.
 
 ```
