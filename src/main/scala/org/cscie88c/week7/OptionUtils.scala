@@ -1,13 +1,20 @@
 package org.cscie88c.week7
 
-import scala.io.Source
-import scala.util.{Try, Success, Failure}
+import scala.util.{Success, Try}
 
 object OptionUtils {
-  
-  def fileCharCount(fileName: String): Try[Long] = ???
 
-  def charCountAsString(fileName: String): String = ???
+  def fileCharCount(fileName: String): Try[Long] = Try(
+    scala.io.Source.fromResource(fileName).length
+  )
 
-  def lineStreamFromFile(fileName: String): Option[LazyList[String]] = ???
+  def charCountAsString(fileName: String): String =
+    fileCharCount(fileName) match {
+      case Success(c) => f"number of characters: $c"
+      case _          => "error opening file"
+    }
+  def lineStreamFromFile(fileName: String): Option[LazyList[String]] =
+    Try(
+      LazyList.from(scala.io.Source.fromResource(fileName).getLines())
+    ).toOption
 }
