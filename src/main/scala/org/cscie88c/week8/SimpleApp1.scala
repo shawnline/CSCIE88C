@@ -7,7 +7,6 @@ import scala.io.Source
 
 // run using: sbt "runMain org.cscie88c.week8.SimpleApp1 <args>"
 object SimpleApp1 extends LazyLogging {
-
   def lineStreamFromFile(fileName: String): Option[LazyList[String]] =
     Try {
       LazyList.from(Source.fromResource(fileName).getLines())
