@@ -16,4 +16,11 @@ class UtilFunctions {
       if (pythTest(i, j, k))
     } yield (i, j, k)
   }.toList
+<<<<<<< HEAD
+=======
+
+  def mult2(a: Int, b: Int): Int = {
+    a * b
+  }
+>>>>>>> d8937e8 (Fixed merge conflict)
 }

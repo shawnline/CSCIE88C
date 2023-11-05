@@ -15,6 +15,7 @@ object Subject {
       isStem = fields(2).toBoolean
     )
   }
+<<<<<<< HEAD
   val allSubjects: List[Subject] = List(
     Subject(1, "Physics", isStem = true),
     Subject(2, "Chemistry", isStem = true),
@@ -24,4 +25,15 @@ object Subject {
   def stemSubjects: List[Subject] = {
     allSubjects.filter(_.isStem)
   }
+=======
+    val allSubjects: List[Subject] = List(
+      Subject(1, "Physics", isStem = true),
+      Subject(2, "Chemistry", isStem = true),
+      Subject(3, "Math", isStem = true),
+      Subject(4, "English", isStem = false)
+    )
+    def stemSubjects: List[Subject] = {
+      allSubjects.filter(_.isStem)
+    }
+>>>>>>> d8937e8 (Fixed merge conflict)
 }

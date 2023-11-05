@@ -14,15 +14,12 @@ class PrerequisiteTest extends StandardTest {
       "CS2086,05-Mar-13,75"
     ).map(CustomerTransaction(_))
 
-    "executed" should {
-      // TODO: Fix this
-      "filter transactions less than $100" in {
-        val expectedResult =
-          List("CS4147,08-Jul-13,121", "CS3904,20-Jul-14,103").map(
-            CustomerTransaction(_)
-          )
-        Prerequisite.getFilteredTransactions(testData) shouldBe (expectedResult)
-      }
+  "executed" should {
+    //TODO: Fix this
+    "filter transactions less than $100" in {
+      val expectedResult = List("CS4147,08-Jul-13,121","CS3904,20-Jul-14,103").map(CustomerTransaction(_))
+      Prerequisite.getFilteredTransactions(testData) shouldBe(expectedResult)
+    }
 
       "calculate average transaction amount by month and year" in {
         Prerequisite.getAverageTransactionAmountByMonthAndYear(
